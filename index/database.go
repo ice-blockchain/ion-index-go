@@ -22,7 +22,15 @@ func afterConnectRegisterTypes(ctx context.Context, conn *pgx.Conn) error {
 		"_tonhash",
 	}
 	for _, type_name := range data_type_names {
-		data_type, _ := conn.LoadType(ctx, type_name)
+		data_type, err := conn.LoadType(ctx, type_name)
+		if err != nil {
+			log.Printf("Failed to load type '%s': %v\n", type_name, err)
+			continue // Skip registering this type if it fails
+		}
+		if data_type == nil {
+			log.Printf("Loaded type '%s' is nil, skipping registration\n", type_name)
+			continue // Avoid registering a nil type
+		}
 		conn.TypeMap().RegisterType(data_type)
 	}
 	return nil

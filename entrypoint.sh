@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-if [ "$POSTGRES_PASSWORD" -eq 0 ]; then
+if [ -z "$POSTGRES_PASSWORD" ]; then
     echo "Using postgres connection without password"
     export TON_INDEXER_PG_DSN="postgresql://${POSTGRES_USER}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}"
 else
@@ -38,4 +38,4 @@ fi
 
 echo "Args: $INDEX_ARGS"
 
-ton-index-go -pg $TON_INDEXER_PG_DSN -bind ":8081" $INDEX_ARGS $@
+ton-index-go -pg $TON_INDEXER_PG_DSN -bind ":8087" $INDEX_ARGS $@

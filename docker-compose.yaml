@@ -23,8 +23,8 @@ services:
     command: -prefork
     init: true
     ports:
-      - target: 8081
-        published: ${TON_INDEXER_API_PORT:-8081}
+      - target: 8087
+        published: ${TON_INDEXER_API_PORT:-8087}
         protocol: tcp
         mode: host
     environment: *indexer-environment
@@ -36,9 +36,10 @@ services:
           - "node.labels.${TONCENTER_ENV:?}.ton-index-go.api==true"
     networks:
       internal:
-      toncenter-global:
-        aliases:
-          - ${TONCENTER_ENV:?}-ton-index-go-api
+      # toncenter-global:
+      #   aliases:
+      #     - ${TONCENTER_ENV:?}-ton-index-go-api
+      ion-indexer_internal:  # Use the existing network
 
 networks:
   internal:
@@ -46,8 +47,10 @@ networks:
     external: false
     driver_opts:
       com.docker.network.driver.mtu: 1350
-  toncenter-global:
-    external: true
+  # toncenter-global:
+  #   external: true
+  ion-indexer_internal:
+    external: true  # Specify that this network already exists
 
 secrets:
   postgres_password:
