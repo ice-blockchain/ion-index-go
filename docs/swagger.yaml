@@ -1821,7 +1821,7 @@ paths:
     post:
       consumes:
       - application/json
-      description: Send an external message to the TON network.
+      description: Send an external message to the ION network.
       operationId: api_v3_post_v2_message
       parameters:
       - description: Message in boc base64 format.

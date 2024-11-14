@@ -1182,7 +1182,7 @@ func GetV2AddressInformation(c *fiber.Ctx) error {
 
 // @summary Send Message
 //
-// @description Send an external message to the TON network.
+// @description Send an external message to the ION network.
 //
 // @id api_v3_post_v2_message
 // @tags api/v2
@@ -1380,8 +1380,8 @@ func main() {
 	var timeout_ms int
 
 	flag.StringVar(&settings.PgDsn, "pg", "postgresql://localhost:5432", "PostgreSQL connection string")
-	flag.StringVar(&settings.Request.V2Endpoint, "v2", "", "TON HTTP API endpoint for proxied methods")
-	flag.StringVar(&settings.Request.V2ApiKey, "v2-apikey", "", "API key for TON HTTP API endpoint")
+	flag.StringVar(&settings.Request.V2Endpoint, "v2", "", "ION HTTP API endpoint for proxied methods")
+	flag.StringVar(&settings.Request.V2ApiKey, "v2-apikey", "", "API key for ION HTTP API endpoint")
 	flag.IntVar(&settings.MaxConns, "maxconns", 100, "PostgreSQL max connections")
 	flag.IntVar(&settings.MinConns, "minconns", 0, "PostgreSQL min connections")
 	flag.StringVar(&settings.Bind, "bind", ":8000", "Bind address")

@@ -1163,7 +1163,7 @@ const docTemplate = `{
                         "APIKeyQuery": []
                     }
                 ],
-                "description": "Send an external message to the TON network.",
+                "description": "Send an external message to the ION network.",
                 "consumes": [
                     "application/json"
                 ],
