@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "TON Index collects data from a full node to PostgreSQL database and provides convenient API to an indexed blockchain.",
-        "title": "TON Index (Go)",
+        "description": "ION Index collects data from a full node to PostgreSQL database and provides convenient API to an indexed blockchain.",
+        "title": "ION Index (Go)",
         "contact": {},
         "version": "1.1.0"
     },

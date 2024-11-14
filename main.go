@@ -42,9 +42,9 @@ func onlyOneOf(flags ...bool) bool {
 var pool *index.DbClient
 var settings Settings
 
-//	@title			TON Index (Go)
+//	@title			ION Index (Go)
 //	@version		1.1.0
-//	@description	TON Index collects data from a full node to PostgreSQL database and provides convenient API to an indexed blockchain.
+//	@description	ION Index collects data from a full node to PostgreSQL database and provides convenient API to an indexed blockchain.
 //  @query.collection.format multi
 
 //	@securitydefinitions.apikey APIKeyHeader
@@ -1409,7 +1409,7 @@ func main() {
 	}
 	// web server
 	config := fiber.Config{
-		AppName:        "TON Index API",
+		AppName:        "ION Index API",
 		Concurrency:    256 * 1024,
 		Prefork:        settings.Prefork,
 		ErrorHandler:   ErrorHandlerFunc,
@@ -1501,7 +1501,7 @@ func main() {
 
 	// swagger
 	var swagger_config = swagger.Config{
-		Title:           "TON Index (" + settings.InstanceName + ") - Swagger UI",
+		Title:           "ION Index (" + settings.InstanceName + ") - Swagger UI",
 		Layout:          "BaseLayout",
 		DeepLinking:     true,
 		TryItOutEnabled: true,

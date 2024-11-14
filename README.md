@@ -1,6 +1,6 @@
-# TON Index GO
+# ION Index GO
 
-Fast and convenient TON Index API.
+Fast and convenient ION Index API.
 
 ## Deploy with ansible
 
