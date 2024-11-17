@@ -1064,7 +1064,7 @@ info:
   title: ION Index (Go)
   version: 1.1.0
 paths:
-  /api/v3/accountStates:
+  /indexer/v3/accountStates:
     get:
       consumes:
       - application/json
@@ -1101,7 +1101,7 @@ paths:
       summary: Get Account States
       tags:
       - accounts
-  /api/v3/actions:
+  /indexer/v3/actions:
     get:
       consumes:
       - application/json
@@ -1139,7 +1139,7 @@ paths:
       summary: Get Actions
       tags:
       - events
-  /api/v3/addressBook:
+  /indexer/v3/addressBook:
     get:
       consumes:
       - application/json
@@ -1171,7 +1171,7 @@ paths:
       summary: Address Book
       tags:
       - accounts
-  /api/v3/addressInformation:
+  /indexer/v3/addressInformation:
     get:
       consumes:
       - application/json
@@ -1205,7 +1205,7 @@ paths:
       summary: Get Address Information
       tags:
       - api/v2
-  /api/v3/adjacentTransactions:
+  /indexer/v3/adjacentTransactions:
     get:
       consumes:
       - application/json
@@ -1240,7 +1240,7 @@ paths:
       summary: Get Adjacent Transactions
       tags:
       - blockchain
-  /api/v3/blocks:
+  /indexer/v3/blocks:
     get:
       consumes:
       - application/json
@@ -1321,7 +1321,7 @@ paths:
       summary: Get blocks
       tags:
       - blockchain
-  /api/v3/estimateFee:
+  /indexer/v3/estimateFee:
     post:
       consumes:
       - application/json
@@ -1352,7 +1352,7 @@ paths:
       summary: Estimate Fee
       tags:
       - api/v2
-  /api/v3/events:
+  /indexer/v3/events:
     get:
       consumes:
       - application/json
@@ -1440,7 +1440,7 @@ paths:
       summary: Get Events
       tags:
       - events
-  /api/v3/jetton/burns:
+  /indexer/v3/jetton/burns:
     get:
       consumes:
       - application/json
@@ -1525,7 +1525,7 @@ paths:
       summary: Get Jetton Burns
       tags:
       - jettons
-  /api/v3/jetton/masters:
+  /indexer/v3/jetton/masters:
     get:
       consumes:
       - application/json
@@ -1576,7 +1576,7 @@ paths:
       summary: Get Jetton Masters
       tags:
       - jettons
-  /api/v3/jetton/transfers:
+  /indexer/v3/jetton/transfers:
     get:
       consumes:
       - application/json
@@ -1668,7 +1668,7 @@ paths:
       summary: Get Jetton Transfers
       tags:
       - jettons
-  /api/v3/jetton/wallets:
+  /indexer/v3/jetton/wallets:
     get:
       consumes:
       - application/json
@@ -1735,7 +1735,7 @@ paths:
       summary: Get Jetton Wallets
       tags:
       - jettons
-  /api/v3/masterchainBlockShardState:
+  /indexer/v3/masterchainBlockShardState:
     get:
       consumes:
       - application/json
@@ -1764,7 +1764,7 @@ paths:
       summary: Get masterchain block shard state
       tags:
       - blockchain
-  /api/v3/masterchainBlockShards:
+  /indexer/v3/masterchainBlockShards:
     get:
       consumes:
       - application/json
@@ -1794,7 +1794,7 @@ paths:
       summary: Get masterchain block shard state
       tags:
       - blockchain
-  /api/v3/masterchainInfo:
+  /indexer/v3/masterchainInfo:
     get:
       consumes:
       - application/json
@@ -1817,7 +1817,7 @@ paths:
       summary: Get Masterchain Info
       tags:
       - blockchain
-  /api/v3/message:
+  /indexer/v3/message:
     post:
       consumes:
       - application/json
@@ -1847,7 +1847,7 @@ paths:
       summary: Send Message
       tags:
       - api/v2
-  /api/v3/messages:
+  /indexer/v3/messages:
     get:
       consumes:
       - application/json
@@ -1944,7 +1944,7 @@ paths:
       summary: Get messages
       tags:
       - blockchain
-  /api/v3/nft/collections:
+  /indexer/v3/nft/collections:
     get:
       consumes:
       - application/json
@@ -1995,7 +1995,7 @@ paths:
       summary: Get NFT collections
       tags:
       - nfts
-  /api/v3/nft/items:
+  /indexer/v3/nft/items:
     get:
       consumes:
       - application/json
@@ -2057,7 +2057,7 @@ paths:
       summary: Get NFT items
       tags:
       - nfts
-  /api/v3/nft/transfers:
+  /indexer/v3/nft/transfers:
     get:
       consumes:
       - application/json
@@ -2149,7 +2149,7 @@ paths:
       summary: Get NFT Transfers
       tags:
       - nfts
-  /api/v3/runGetMethod:
+  /indexer/v3/runGetMethod:
     post:
       consumes:
       - application/json
@@ -2196,7 +2196,7 @@ paths:
       summary: Run Get-Method
       tags:
       - api/v2
-  /api/v3/topAccountsByBalance:
+  /indexer/v3/topAccountsByBalance:
     get:
       consumes:
       - application/json
@@ -2235,7 +2235,7 @@ paths:
       summary: Get Top Accounts By Balance
       tags:
       - stats
-  /api/v3/transactions:
+  /indexer/v3/transactions:
     get:
       consumes:
       - application/json
@@ -2341,7 +2341,7 @@ paths:
       summary: Get transactions
       tags:
       - blockchain
-  /api/v3/transactionsByMasterchainBlock:
+  /indexer/v3/transactionsByMasterchainBlock:
     get:
       consumes:
       - application/json
@@ -2391,7 +2391,7 @@ paths:
       summary: Get transactions by Masterchain block
       tags:
       - blockchain
-  /api/v3/transactionsByMessage:
+  /indexer/v3/transactionsByMessage:
     get:
       consumes:
       - application/json
@@ -2448,7 +2448,7 @@ paths:
       summary: Get transactions by message
       tags:
       - blockchain
-  /api/v3/walletInformation:
+  /indexer/v3/walletInformation:
     get:
       consumes:
       - application/json
@@ -2485,7 +2485,7 @@ paths:
       summary: Get Wallet Information
       tags:
       - api/v2
-  /api/v3/walletStates:
+  /indexer/v3/walletStates:
     get:
       consumes:
       - application/json
