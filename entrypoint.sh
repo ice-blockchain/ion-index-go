@@ -16,15 +16,15 @@ fi
 
 if [ "$POSTGRES_PASSWORD" -eq 0 ]; then
     echo "Using postgres connection without password"
-    export TON_INDEXER_PG_DSN="postgresql://${POSTGRES_USER}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}"
+    export ION_INDEXER_PG_DSN="postgresql://${POSTGRES_USER}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}"
 else
     echo "Using postgres connection with password"
-    export TON_INDEXER_PG_DSN="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}"
+    export ION_INDEXER_PG_DSN="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}"
 fi
 printenv
 
 INDEX_ARGS=""
-case $TON_INDEXER_IS_TESTNET in 
+case $ION_INDEXER_IS_TESTNET in 
     y|yes|t|true|on|1)
         echo "Using testnet"
         INDEX_ARGS="$INDEX_ARGS -testnet"
@@ -32,10 +32,10 @@ case $TON_INDEXER_IS_TESTNET in
     *) ;;
 esac
 
-if [ ! -z "$TON_INDEXER_TON_HTTP_API_ENDPOINT" ]; then
-    INDEX_ARGS="$INDEX_ARGS -v2 ${TON_INDEXER_TON_HTTP_API_ENDPOINT}"
+if [ ! -z "$ION_INDEXER_TON_HTTP_API_ENDPOINT" ]; then
+    INDEX_ARGS="$INDEX_ARGS -v2 ${ION_INDEXER_TON_HTTP_API_ENDPOINT}"
 fi
 
 echo "Args: $INDEX_ARGS"
 
-ion-index-go -pg $TON_INDEXER_PG_DSN -bind ":8081" $INDEX_ARGS $@
+ion-index-go -pg $ION_INDEXER_PG_DSN -bind ":8081" $INDEX_ARGS $@
