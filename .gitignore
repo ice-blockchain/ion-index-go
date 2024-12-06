@@ -54,6 +54,6 @@ build/
 
 .env.*
 .env
-ton-index-go
+ion-index-go
 
 commit.sh

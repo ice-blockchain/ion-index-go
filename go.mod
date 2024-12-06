@@ -1,4 +1,4 @@
-module github.com/kdimentionaltree/ton-index-go
+module github.com/kdimentionaltree/ion-index-go
 
 go 1.22.1
 

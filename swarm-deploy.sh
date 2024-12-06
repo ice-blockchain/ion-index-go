@@ -63,7 +63,7 @@ set -- "${POSITIONAL_ARGS[@]}"
 
 # toncenter env: testnet, mainnet, stage
 export TONCENTER_ENV=${1:-mainnet}
-STACK_NAME="${TONCENTER_ENV}-ton-index-go"
+STACK_NAME="${TONCENTER_ENV}-ion-index-go"
 echo "Deploying stack: ${STACK_NAME}"
 
 if [ -f ".env.${TONCENTER_ENV}" ]; then

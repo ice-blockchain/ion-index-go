@@ -38,4 +38,4 @@ fi
 
 echo "Args: $INDEX_ARGS"
 
-ton-index-go -pg $TON_INDEXER_PG_DSN -bind ":8081" $INDEX_ARGS $@
+ion-index-go -pg $TON_INDEXER_PG_DSN -bind ":8081" $INDEX_ARGS $@

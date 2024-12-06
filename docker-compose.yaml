@@ -14,7 +14,7 @@ x-indexer-environment: &indexer-environment
 
 services:
   index-api:
-    image: ${DOCKER_REGISTRY:-localhost:5000}/ton-index-go:${IMAGE_TAG:?}
+    image: ${DOCKER_REGISTRY:-localhost:5000}/ion-index-go:${IMAGE_TAG:?}
     build:
       context: .
       dockerfile: Dockerfile
@@ -33,12 +33,12 @@ services:
       replicas: ${SWARM_REPLICAS:-1}
       placement:
         constraints:
-          - "node.labels.${TONCENTER_ENV:?}.ton-index-go.api==true"
+          - "node.labels.${TONCENTER_ENV:?}.ion-index-go.api==true"
     networks:
       internal:
       toncenter-global:
         aliases:
-          - ${TONCENTER_ENV:?}-ton-index-go-api
+          - ${TONCENTER_ENV:?}-ion-index-go-api
 
 networks:
   internal:

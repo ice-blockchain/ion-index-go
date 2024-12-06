@@ -13,8 +13,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/pprof"
 	"github.com/gofiber/swagger"
-	_ "github.com/kdimentionaltree/ton-index-go/docs"
-	"github.com/kdimentionaltree/ton-index-go/index"
+	_ "github.com/kdimentionaltree/ion-index-go/docs"
+	"github.com/kdimentionaltree/ion-index-go/index"
 )
 
 type Settings struct {

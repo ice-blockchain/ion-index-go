@@ -1,7 +1,7 @@
 ---
-application_name: ton-index-go
+application_name: ion-index-go
 
-# ADJUST. For additional args call build/ton-index-go -help
+# ADJUST. For additional args call build/ion-index-go -help
 bind_addr: ":4100"
 pg_dsn: postgresql://localhost:5432/mainnet
 additional_args:
@@ -13,6 +13,6 @@ remote_hosts:
   - ubuntu-03
 service_user: root
 service_group: root
-go_binary: ton-index-go
+go_binary: ion-index-go
 go_binary_path: /usr/local/bin
 systemd_service_path: /etc/systemd/system
