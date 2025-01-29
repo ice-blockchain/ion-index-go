@@ -15,7 +15,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/v3/accountStates": {
+        "/indexer/v3/accountStates": {
             "get": {
                 "security": [
                     {
@@ -73,7 +73,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/actions": {
+        "/indexer/v3/actions": {
             "get": {
                 "security": [
                     {
@@ -133,7 +133,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/addressBook": {
+        "/indexer/v3/addressBook": {
             "get": {
                 "security": [
                     {
@@ -184,7 +184,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/addressInformation": {
+        "/indexer/v3/addressInformation": {
             "get": {
                 "security": [
                     {
@@ -238,7 +238,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/adjacentTransactions": {
+        "/indexer/v3/adjacentTransactions": {
             "get": {
                 "security": [
                     {
@@ -294,7 +294,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/blocks": {
+        "/indexer/v3/blocks": {
             "get": {
                 "security": [
                     {
@@ -414,7 +414,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/estimateFee": {
+        "/indexer/v3/estimateFee": {
             "post": {
                 "security": [
                     {
@@ -463,7 +463,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/events": {
+        "/indexer/v3/events": {
             "get": {
                 "security": [
                     {
@@ -591,7 +591,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/jetton/burns": {
+        "/indexer/v3/jetton/burns": {
             "get": {
                 "security": [
                     {
@@ -713,7 +713,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/jetton/masters": {
+        "/indexer/v3/jetton/masters": {
             "get": {
                 "security": [
                     {
@@ -790,7 +790,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/jetton/transfers": {
+        "/indexer/v3/jetton/transfers": {
             "get": {
                 "security": [
                     {
@@ -922,7 +922,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/jetton/wallets": {
+        "/indexer/v3/jetton/wallets": {
             "get": {
                 "security": [
                     {
@@ -1021,7 +1021,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/masterchainBlockShardState": {
+        "/indexer/v3/masterchainBlockShardState": {
             "get": {
                 "security": [
                     {
@@ -1068,7 +1068,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/masterchainBlockShards": {
+        "/indexer/v3/masterchainBlockShards": {
             "get": {
                 "security": [
                     {
@@ -1115,7 +1115,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/masterchainInfo": {
+        "/indexer/v3/masterchainInfo": {
             "get": {
                 "security": [
                     {
@@ -1153,7 +1153,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/message": {
+        "/indexer/v3/message": {
             "post": {
                 "security": [
                     {
@@ -1202,7 +1202,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/messages": {
+        "/indexer/v3/messages": {
             "get": {
                 "security": [
                     {
@@ -1342,7 +1342,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/nft/collections": {
+        "/indexer/v3/nft/collections": {
             "get": {
                 "security": [
                     {
@@ -1419,7 +1419,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/nft/items": {
+        "/indexer/v3/nft/items": {
             "get": {
                 "security": [
                     {
@@ -1512,7 +1512,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/nft/transfers": {
+        "/indexer/v3/nft/transfers": {
             "get": {
                 "security": [
                     {
@@ -1644,7 +1644,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/runGetMethod": {
+        "/indexer/v3/runGetMethod": {
             "post": {
                 "security": [
                     {
@@ -1693,7 +1693,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/topAccountsByBalance": {
+        "/indexer/v3/topAccountsByBalance": {
             "get": {
                 "security": [
                     {
@@ -1753,7 +1753,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/transactions": {
+        "/indexer/v3/transactions": {
             "get": {
                 "security": [
                     {
@@ -1905,7 +1905,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/transactionsByMasterchainBlock": {
+        "/indexer/v3/transactionsByMasterchainBlock": {
             "get": {
                 "security": [
                     {
@@ -1980,7 +1980,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/transactionsByMessage": {
+        "/indexer/v3/transactionsByMessage": {
             "get": {
                 "security": [
                     {
@@ -2065,7 +2065,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/walletInformation": {
+        "/indexer/v3/walletInformation": {
             "get": {
                 "security": [
                     {
@@ -2119,7 +2119,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/v3/walletStates": {
+        "/indexer/v3/walletStates": {
             "get": {
                 "security": [
                     {
@@ -3406,29 +3406,6 @@ const docTemplate = `{
                 }
             }
         },
-        "TraceNode": {
-            "type": "object",
-            "properties": {
-                "children": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/TraceNode"
-                    }
-                },
-                "in_msg": {
-                    "$ref": "#/definitions/Message"
-                },
-                "in_msg_hash": {
-                    "type": "string"
-                },
-                "transaction": {
-                    "$ref": "#/definitions/Transaction"
-                },
-                "tx_hash": {
-                    "type": "string"
-                }
-            }
-        },
         "Transaction": {
             "type": "object",
             "properties": {
@@ -3761,6 +3738,29 @@ const docTemplate = `{
                 },
                 "start_from": {
                     "type": "integer"
+                }
+            }
+        },
+        "index.TraceNode": {
+            "type": "object",
+            "properties": {
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/index.TraceNode"
+                    }
+                },
+                "in_msg": {
+                    "$ref": "#/definitions/Message"
+                },
+                "in_msg_hash": {
+                    "type": "string"
+                },
+                "transaction": {
+                    "$ref": "#/definitions/Transaction"
+                },
+                "tx_hash": {
+                    "type": "string"
                 }
             }
         }

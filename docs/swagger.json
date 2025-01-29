@@ -3398,29 +3398,6 @@
                 }
             }
         },
-        "TraceNode": {
-            "type": "object",
-            "properties": {
-                "children": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/TraceNode"
-                    }
-                },
-                "in_msg": {
-                    "$ref": "#/definitions/Message"
-                },
-                "in_msg_hash": {
-                    "type": "string"
-                },
-                "transaction": {
-                    "$ref": "#/definitions/Transaction"
-                },
-                "tx_hash": {
-                    "type": "string"
-                }
-            }
-        },
         "Transaction": {
             "type": "object",
             "properties": {
@@ -3753,6 +3730,29 @@
                 },
                 "start_from": {
                     "type": "integer"
+                }
+            }
+        },
+        "index.TraceNode": {
+            "type": "object",
+            "properties": {
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/index.TraceNode"
+                    }
+                },
+                "in_msg": {
+                    "$ref": "#/definitions/Message"
+                },
+                "in_msg_hash": {
+                    "type": "string"
+                },
+                "transaction": {
+                    "$ref": "#/definitions/Transaction"
+                },
+                "tx_hash": {
+                    "type": "string"
                 }
             }
         }

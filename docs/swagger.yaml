@@ -822,21 +822,6 @@ definitions:
         example: "0"
         type: string
     type: object
-  TraceNode:
-    properties:
-      children:
-        items:
-          $ref: '#/definitions/TraceNode'
-        type: array
-      in_msg:
-        $ref: '#/definitions/Message'
-      in_msg_hash:
-        type: string
-      transaction:
-        $ref: '#/definitions/Transaction'
-      tx_hash:
-        type: string
-    type: object
   Transaction:
     properties:
       account:
@@ -1056,6 +1041,21 @@ definitions:
         type: integer
       start_from:
         type: integer
+    type: object
+  index.TraceNode:
+    properties:
+      children:
+        items:
+          $ref: '#/definitions/index.TraceNode'
+        type: array
+      in_msg:
+        $ref: '#/definitions/Message'
+      in_msg_hash:
+        type: string
+      transaction:
+        $ref: '#/definitions/Transaction'
+      tx_hash:
+        type: string
     type: object
 info:
   contact: {}
